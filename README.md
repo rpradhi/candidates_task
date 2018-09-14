@@ -1,4 +1,5 @@
-Regarding proposed improvements:
+Code Optimization:
+
 1. Configured the FTP params as a constant
 2. As ActiveRecord initialization is specific to class moved it ti csv_exporter.rb instead of Rspec.
 3. The import retry count was always equal to 1 in initial version, because break always interrupted 5.times loop on the first iteration;
@@ -14,7 +15,7 @@ So I am removing it completely in current version because this variable is alway
    Changed the code to have error handling string to sperate class as TransacitionError, where you define error messages. This leads to code maintainability
    Removed variables that duplicate class variables.
 
-Further improvements
+Further improvements:
 
 1. I see this functionality to be renamed as CSVImporter as the data is imported from csv
 2. Data validation can be seperated as we did for TransactionErrors
